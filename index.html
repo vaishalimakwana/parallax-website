@@ -1,0 +1,1514 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>SAP UI WORKS</title>
+<link type="text/css" href="css/reset.css" rel="stylesheet"/>
+<link type="text/css" href="css/style.css" rel="stylesheet"/>
+<link type="text/css" href="css/fixed-positioning.css" rel="stylesheet"/>
+<link type="text/css" href="css/flexslider.css" rel="stylesheet"/>
+<link rel="stylesheet" href="css/jpreloader.css" />
+<!--[if IE 9]>
+
+<style type="text/css">
+#water_wave{
+	background: url(../images/water_wave.png) no-repeat;
+	width:88px;
+	height:80px;
+	left: 566px;
+    top:366px!important;
+	-webkit-animation: Wave-Small 500s linear infinite, Wave-Small-Size 5s ease-in-out infinite;
+		-moz-animation: Wave-Small 500s linear infinite, Wave-Small-Size 5s ease-in-out infinite;
+		-ms-animation: Wave-Small 500s linear infinite, Wave-Small-Size 5s ease-in-out infinite;
+		-o-animation: Wave-Small 500s linear infinite, Wave-Small-Size 5s ease-in-out infinite;
+	}
+ 
+</style>
+<![endif]-->
+
+<script type="text/javascript" src="js/jquery-1.9.1.js" ></script>
+<script type="text/javascript" src="js/modernizr.js"></script>
+<script src="js/jquery-ui.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js" ></script>
+<script type="text/javascript" src="js/jquery.easing.compatibility.js" ></script>
+<script type="text/javascript" src="js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="js/jpreloader.js"></script>
+<script type="text/javascript" src="js/jquery.transit.min.js"></script>
+<script type="text/javascript" src="js/hexagon_hover.js"></script>
+<script type="text/javascript" src="js/team.js"></script>
+<script type="text/javascript" src="js/jquery.bpopup.min.js"></script>
+<script type="text/javascript" src="js/popup.js"></script>
+<script type="text/javascript" src="js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="js/jquery.thumbnailScroller.js"></script>
+
+<script type="text/javascript">
+// Performs an animated scroll to the right place easeInOutQuint
+
+
+			$(function() {
+                $('ul.menu a,a.factory_link').bind('click',function(event){
+                    var $anchor = $(this);
+					
+                    
+                    $('html, body').stop().animate({
+                        scrollTop: $($anchor.attr('href')).offset().top
+                    }, 1800,'easeInOutExpo');
+                
+                   event.preventDefault();
+                });
+				
+	$(window).load(function(){
+    
+
+      $('.flexslider').flexslider({
+        animation: "fade",
+		slideshow: true, 
+		slideshowSpeed: 4000,           //Integer: Set the speed of the slideshow cycling, in milliseconds
+		animationSpeed: 600,
+		pauseOnAction: true,            //Boolean: Pause the slideshow when interacting with control elements, highly recommended.
+		pauseOnHover: true,  
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+				
+			});
+	
+  
+    });
+</script>
+<script type="text/javascript">
+/*var OFFSET = ($(window).height / 5);*/
+ 
+$(document).ready(function(){
+
+	
+	
+	//calling jPreLoader
+	$('body').jpreLoader({	
+		loaderVPos: '50%',
+		autoClose: true	
+	},function(){
+		hexagon_load();
+		});
+	
+	// showroom page tabs 
+	$("#tab_content div").hide(); // Initially hide all content
+	$("#tabs li:first").attr("id","current"); // Activate first tab
+	$("#tab_content div:first").fadeToggle(1600, "swing"); // Show first tab content
+    
+    $('#tabs a').click(function(e) {
+        e.preventDefault();        
+        $("#tab_content div").hide(); //Hide all content
+        $("#tabs li").attr("id",""); //Reset id's
+        $(this).parent().attr("id","current"); // Activate this
+        $('#' + $(this).attr('title')).fadeToggle(1600, "jswing"); // Show content for current tab
+    });
+	// showroom page tabs 
+	
+		
+	$("html").niceScroll();
+	
+
+	function hexagon_load(){
+
+	
+	
+	
+	
+	$(".greyslide").transition({x:680,easing:"easeInOutCubic",duration:"700"});
+	$("#home_slide_right").transition({x:-245,easing:"easeInOutCubic",duration:"700",delay:"800"});
+	$(".purple").transition({x:500,easing:"easeInOutCubic",duration:"700",delay:"1200"});
+	$("#bottom_stage").transition({y:-345,easing:"easeInOutCubic",duration:"700",delay:"1400"});
+	$("#homemain_content #sap_ui_works").transition({x:48,opacity:1,easing:"easeInOutSine",duration:"500",delay:"1800"});
+	$("#homemain_content h3").transition({x:60,opacity:1,easing:"easeInOutSine",duration:"500",delay:"2000"});
+	$("#homemain_content p").transition({x:110,opacity:1,easing:"easeInOutSine",duration:"470", delay:"2200"});
+	$("#hexagon_bg").transition({opacity:1,easing:"easeInOutCirc",duration:"500",delay:'2400'});
+	$("#hex7").transition({opacity:1,easing:"easeInOutCirc",duration:"500",delay:'2600'});
+	$("#hex9").transition({opacity:1,easing:"easeInOutCirc",duration:"500",delay:'2800'});
+	$("#hex12").transition({opacity:1,easing:"easeInOutCirc",duration:"500",delay:'3000'});	
+	$("#hex15").transition({opacity:1,easing:"easeInOutCirc",duration:"500",delay:'3200'});
+	$("#hex16").transition({opacity:1,easing:"easeInOutCirc",duration:"500",delay:'3400'});
+	$("#hex17").transition({opacity:1,easing:"easeInOutCirc",duration:"500",delay:'3600'});	
+	$('#head').transition({left:0,easing:"linear",duration:"500", delay:"3800"});
+	$('ul.menu').transition({opacity:1,easing:"linear", delay:"4000"});
+	}
+	
+	
+
+	});
+	
+</script>
+
+    <style type="text/css">
+        #demo-wrapper
+        {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            padding: 40px 20px 0px 20px;
+        }
+       
+        #demo-right
+        {
+            width: 85%;
+            float: left;
+        }
+        #hWrapperAuto
+        {
+            margin-top: 20px;
+        }
+        #demo-tabs
+        {
+            width: 100%;
+            height: 50px;
+            color: White;
+            margin: 0;
+            padding: 0;
+        }
+        #demo-tabs div.item
+        {
+            height: 35px;
+            float: left;
+            background-color: #2F2F2F;
+            border: solid 1px gray;
+            border-bottom: none;
+            padding: 0;
+            margin: 0;
+            margin-left: 10px;
+            text-align: center;
+            padding: 10px 4px 4px 4px;
+            font-weight: bold;
+        }
+        #contents
+        {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            color: White;
+            font: arial;
+            font-size: 11pt;
+        }
+        #demo-tabs div.item.active-tab
+        {
+            background-color: Black;
+        }
+        #demo-tabs div.item.active-tabc
+        {
+            background-color: Black;
+        }
+        #v1, #v2
+        {
+            margin: 20px;
+        }
+        .visible
+        {
+            display: block;
+        }
+        .hidden
+        {
+            display: none;
+        }
+        #oldWrapper
+        {
+            margin-left: 100px;
+        }
+        #contents a
+        {
+            color: yellow;
+        }
+        #contents a:hover
+        {
+            text-decoration: none;
+            color: Gray;
+        }
+        .heading
+        {
+            font-size: 20pt;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body class="cBody">
+<div id="sap_container">
+	 <header id="head">
+    
+          
+            <ul class="menu">
+                 <li><a href="#home" data-0="color:rgb(38,195,246);" data-700="color:rgb(255,255,255)" data-1000="color:rgb(255,255,255)" data-1700="color:rgb(255,255,255)"  data-2000="color:rgb(255,255,255)" data-3900="color:rgb(255,255,255)" data-4200="color:rgb(255,255,255)" data-4900="color:rgb(255,255,255)" data-5200="color:rgb(255,255,255)" data-5900="color:rgb(255,255,255)" data-6200="color:rgb(255,255,255)">home</a></li>
+                 <li><a href="#lab"  data-0="color:rgb(255,255,255);" data-700="color:rgb(38,195,246)" data-1000="color:rgb(38,195,246)" data-1700="color:rgb(255,255,255)"  data-2000="color:rgb(255,255,255)" data-3900="color:rgb(255,255,255)" data-4200="color:rgb(255,255,255)" data-4900="color:rgb(255,255,255)" data-5200="color:rgb(255,255,255)" data-5900="color:rgb(255,255,255)" data-6200="color:rgb(255,255,255)">Lab</a></li>
+                 <li><a href="#factory" data-0="color:rgb(255,255,255);" data-700="color:rgb(255,255,255)" data-1000="color:rgb(255,255,255)" data-1700="color:rgb(38,195,246)" data-2000="color:rgb(38,195,246)" data-3096="color:rgb(38,195,246)" data-3900="color:rgb(255,255,255)" data-4200="color:rgb(255,255,255)" data-4900="color:rgb(255,255,255)" data-5200="color:rgb(255,255,255)" data-5900="color:rgb(255,255,255)" data-6200="color:rgb(255,255,255)">Factory</a></li> 
+                 <li><img src="images/sap_ui_works_logo.png" width="118" height="23"></li>
+                 <li><a href="#showroom" data-0="color:rgb(255,255,255);" data-700="color:rgb(255,255,255)" data-1000="color:rgb(255,255,255)" data-1700="color:rgb(255,255,255)"  data-2000="color:rgb(255,255,255)" data-3096="color:rgb(255,255,255)"data-3900="color:rgb(38,195,246)" data-4200="color:rgb(38,195,246)" data-4900="color:rgb(255,255,255)"  data-5200="color:rgb(255,255,255)" data-5900="color:rgb(255,255,255)" data-6200="color:rgb(255,255,255)">Showroom</a></li>
+                 <li><a href="#team" data-0="color:rgb(255,255,255);" data-700="color:rgb(255,255,255)" data-1000="color:rgb(255,255,255)" data-1700="color:rgb(255,255,255)"  data-2000="color:rgb(255,255,255)" data-3900="color:rgb(255,255,255)" data-4200="color:rgb(255,255,255)" data-4900="color:rgb(38,195,246)" data-5200="color:rgb(38,195,246)" data-5900="color:rgb(255,255,255)" data-6200="color:rgb(255,255,255)">Team</a></li>
+                 <li><a href="#contact" data-0="color:rgb(255,255,255);" data-700="color:rgb(255,255,255)" data-1000="color:rgb(255,255,255)" data-1700="color:rgb(255,255,255)"  data-2000="color:rgb(255,255,255)" data-3900="color:rgb(255,255,255)" data-4200="color:rgb(255,255,255)" data-4900="color:rgb(255,255,255)" data-5200="color:rgb(255,255,255)" data-5900="color:rgb(38,195,246)" data-6200="color:rgb(38,195,246)" >Contact Us</a></li>
+          
+           </ul>
+            
+       
+      </header> 
+     <section id="home" data-0="background-position:0 0px;" data-end="background-position:0 0px;">
+     
+         <div id="homemain_content">
+         <div id="sap_ui_works"><h2 class="pos_absolute">SAP UI WORKS</h2>
+           <img src="images/sap_ui_works_img.png" width="451" height="70"></div>
+         <h3>is a Center of Excellence for SAP UI applications.</h3>
+         <p>SAP UI WORKS is a Center of Excellence for SAP UI applications.This is aimed at creating an UI showroom to demonstrate "art of the possible" in usability space to our customers/ prospects to generate more business which we can deliver in a factory mode.
+</p>
+         </div>
+         <div class="home_content" id="hex7_content">
+         <h3>Web Dynpro</h3>
+         <p>Web Dynpro is a model based and declarative way of UI development  <br>
+
+		 provided by SAP.</p>
+          </div>
+          
+          <div class="home_content" id="hex12_content">
+         <h3>enterprise portal</h3>
+         <p>SAP Enterprise Portal provides single secure web based platform to seamlessly integrate enterprise applications, information and<br> services.</p>
+          </div>
+          
+          <div class="home_content" id="hex15_content">
+         <h3>sap on mobile</h3>
+         <p> Smartphones &nbsp; Tablets are <br>convenient way of accessing SAP. We provide skills &nbsp; experience in<br> bring SAP to Mobile.</p>
+          </div>
+          
+          <div class="home_content" id="hex9_content">
+         <h3>custom ui</h3>
+         <p>Connect backend SAP to any <br>User Interface technology <br>solution, providing full control  <br>over the  user experience.</p>
+          </div>
+         
+         <div class="home_content" id="hex16_content">
+         <h3>duet enterprise</h3>
+         <p>Helping your business become more agile and productive through SAP and Microsoft interoperability.</p>
+          </div>
+         
+         <div class="home_content" id="hex17_content">
+         <h3>sap UI 5</h3>
+         <p>The UI development toolkit for <br> HTML5 from SAP to build and adapt client applications.</p>
+          </div>
+         <div style="width:100%; position:relative;">
+       <div class="purple pos_absolute">   	
+        <div id="purple-body"> </div>	
+        <div id="purple-bottom"></div>
+       </div>
+		
+       <div class="greyslide pos_absolute">   	
+        <div id="greyslide-body"> </div>	
+        <div id="greyslide-bottom"></div>
+       </div>	
+       
+       <!--<div class="greyslideright pos_absolute"> 
+       <div id="greyslideright-top"></div>  	
+        <div id="greyslideright-body"> </div>	
+        
+       	</div>-->
+        <div id="home_slide_right"></div>
+        <div id="hexagon_bg">
+         <a class="shape" id="hex7"  onMouseOver="hover_hex7();" onMouseOut="no_hover_hex_7();" onClick=" effect_hex7();"  data-xrange="10" data-yrange="10" data-invert="true">
+          <div href="#" class="overlay">
+           <div class="rec1 hex_grey grey_border" >
+           <div id="pillar1" >
+               <img src="images/web_dynopro_img.png" width="40" height="40" class="pos_absolute hex_img">
+               <span class="pillar_txt pos_absolute">web <br>dynpro</span>
+           </div>
+           <div class="rec2 hex_grey grey_border"></div> 
+           <div class="rec3 hex_grey grey_border"></div>
+           </div>
+           <!--rec1 ends here--> 
+          </div>
+          
+           </a>
+           
+           
+           <a class="shape" id="hex9" onMouseOver="hover_hex9();" onMouseOut="no_hover_hex_9();" onClick=" effect_hex9();">
+          <div href="#" class="overlay" >
+          <div class="rec1 hex_blue blue_border"><div id="pillar2"><img src="images/custom_ui_img.png" width="40" height="40" class="pos_absolute hex_img">
+            <span class="pillar_txt pos_absolute"> custom ui </span></div><div class="rec2 hex_blue blue_border"></div> <div class="rec3 hex_blue blue_border"></div></div><!--rec1 ends here-->
+          </div>
+          </a>
+          
+          
+          <a class="shape" id="hex12" onMouseOver="hover_hex12();" onMouseOut="no_hover_hex_12();" onClick="effect_hex12();">
+          <div href="#" class="overlay">
+          <div class="rec1 hex_grey grey_border" ><div id="pillar3"><img src="images/portal_img.png" width="40" height="40" class="pos_absolute hex_img">
+<span class="pillar_txt pos_absolute">enterprise<br> portal</span></div><div class="rec2 hex_grey grey_border"></div> <div class="rec3 hex_grey grey_border"></div></div>
+          <!--rec1 ends here-->
+          </div>
+          </a>
+          
+          
+          <a class="shape" id="hex15" onMouseOver="hover_hex15();" onMouseOut="no_hover_hex_15();" onClick="effect_hex15();">
+          <div href="#" class="overlay" >
+          <div class="rec1 hex_blue blue_border" ><div id="pillar4"><img src="images/sap_mobile_img.png" width="40" height="40" class="pos_absolute hex_img"><span class="pillar_txt pos_absolute">sap <br>on mobile</span>
+		 </div><div class="rec2 hex_blue blue_border"></div> <div class="rec3 hex_blue blue_border"></div></div><!--rec1 ends here-->
+          </div>
+          </a>
+          
+          <a class="shape" id="hex16" onMouseOver="hover_hex16();" onMouseOut="no_hover_hex_16();" onClick="effect_hex16();">
+          <div href="#" class="overlay" >
+          <div class="rec1 hex_grey grey_border" ><div id="pillar5"><img src="images/duet_img.png" width="40" height="40" class="pos_absolute hex_img"><span class="pillar_txt pos_absolute">duet<br>enterprise</span>
+		 </div><div class="rec2 hex_grey grey_border"></div> <div class="rec3 hex_grey grey_border"></div></div><!--rec1 ends here-->
+          </div>
+          </a>
+          
+          <a class="shape" id="hex17" onMouseOver="hover_hex17();" onMouseOut="no_hover_hex_17();" onClick="effect_hex17();">
+          <div href="#" class="overlay" >
+          <div class="rec1 hex_blue blue_border" ><div id="pillar6"><img src="images/sapui5_img.png" width="40" height="40" class="pos_absolute hex_img"><span class="pillar_txt pos_absolute">sap ui5</span>
+           
+		 </div><div class="rec2 hex_blue blue_border"></div> <div class="rec3 hex_blue blue_border"></div></div><!--rec1 ends here-->
+          </div>
+          </a>
+          </div>
+                   <!--<div id="bottom_stage" data-0="bottom[swing]: -350px;" data-865="bottom[swing]: -950px;">-->
+                   <div id="bottom_stage">
+                    <div class="stage_top pos_absolute" id="stage_top1"><img src="images/stage_top.png"></div>
+                    <div class="stage_top pos_absolute" id="stage_top2"><img src="images/stage_top.png"></div>
+                    <div id="big_wheel" class="pos_absolute"></div>
+                    <div class="black_wheel pos_absolute" id="black_wheel1"><img src="images/black_wheel.png"></div>
+                    <div class="grey_wheel pos_absolute" id="grey_wheel1"><img src="images/grey_wheel.png"></div>
+                    <div id="mid_wheel" class="pos_absolute"></div>
+                     <div class="black_wheel pos_absolute" id="black_wheel2"><img src="images/black_wheel.png"></div>
+                    <div class="grey_wheel pos_absolute" id="grey_wheel2"><img src="images/grey_wheel.png"></div>
+                    <div id="small_wheel" class="pos_absolute"></div>
+                    <div class="stage_arrows pos_absolute" id="stage_arrows1"><img src="images/stage_arrows.png"></div>
+                    <div class="stage_arrows pos_absolute" id="stage_arrows2"><img src="images/stage_arrows.png"></div>
+                   </div>
+       </div>
+       
+     </section><!--sap_ui_home ends here-->
+    
+<section id="lab"  data-0="background-position:0px 0px;" data-700="background-position:0px 0px;" data-1000="background-position:0px 0px;">
+
+
+		<div class="lab_container">
+        <div id="lab_diagram" class="pos_absolute" data-0="opacity:0;transform:scale(0);"  data-2000="opacity:0;transform:scale(0);" data-700="opacity:1;transform:scale(1);" data-1000="opacity:1;transform:scale(1);"  data-1200="opacity:0.60;transform:scale(0.70);"
+     data-1345="opacity:0;transform:scale(0);"><img src="images/lab_diagram.png" width="389" height="426"></div>
+          <a class="lab_smallhexagons pos_absolute active_labhex" id="lab_hex1" data-0="transform[cubic]:scale(0)" data-500="transform[cubic]:scale(0.50)"data-700="transform[cubic]:scale(1)"><img src="images/lab_img1.png" width="65" height="45" class="lab_img"></a>
+          <a class="lab_smallhexagons pos_absolute" id="lab_hex2" data-0="transform[cubic]:scale(0)" data-500="transform[cubic]:scale(0.50)"data-700="transform[cubic]:scale(1)"><img src="images/lab_img2.png" width="65" height="45" class="lab_img"></a>
+          <a class="lab_smallhexagons pos_absolute" id="lab_hex3" data-0="transform[cubic]:scale(0)" data-500="transform[cubic]:scale(0.50)"data-700="transform[cubic]:scale(1)"><img src="images/lab_img3.png" width="65" height="45" class="lab_img"></a>
+          <a class="lab_smallhexagons pos_absolute" id="lab_hex4" data-0="transform[cubic]:scale(0)" data-500="transform[cubic]:scale(0.50)"data-700="transform[cubic]:scale(1)"><img src="images/lab_img4.png" width="65" height="45" class="lab_img"></a>
+        <div id="lab_hex" class="pos_absolute" data-0="right:-50%" data-700="right:0%" data-1000="" data-1700="right:-40%"></div>
+      
+     	 <div class="lab_page_content pos_absolute" id="lab_show1" data-700="opacity:1;" data-1000="" data-1400="opacity:0;">
+         <div class="lab_header">sap ui lab</div>
+         <p>The lab is an innovation hub where skills and knowledge are learnt, retained and shared through innovation and experimentation with User Interface technologies.</p>
+<p>&nbsp;</p>
+<p>The Lab provides the technology infrastructure on which research and experiments in new technologies and approaches in user interfaces can happen, allowing the development of new offerings in the SAP UI space and the building of skills in emerging technologies.
+</p>
+		 </div>
+         <div class="lab_page_content pos_absolute" id="lab_show2" data-700="opacity:1;" data-1000=""data-1400="opacity:0;">
+         <div class="lab_header">ui landscape</div>
+         <p>The diagram gives an overview of SAP UI WORKS landscape. SAP Business suites like SAP ECC, ISU, Retail, CRM, SCM, HCM form the Application foundation layer of SAP business applications.</p>
+<p>&nbsp;</p>
+<p>Gateway, Process Integration (PI) and Sybase Unwired Platform (SUP) provide flexibility and middleware tooling that allow nimble adoption of future UI developments by decoupling the application and UI layers.</p>
+		 </div>
+         <div class="lab_page_content pos_absolute" id="lab_show3" data-700="opacity:1;" data-1000=""data-1400="opacity:0;">
+         <div class="lab_header">ui landscape</div>
+         <p>The Lab provides development tools for the SAP and non SAP UI technologies like Web Dynpro,<br>
+ HTML5/CSS3/Javascript, Business Forms, SAP Portal and SAP UI 5.</p>
+
+		 </div>
+         <div class="lab_page_content pos_absolute" id="lab_show4" data-700="opacity:1;" data-1000="" data-1400="opacity:0;">
+         <div class="lab_header">ui landscape</div>
+         <p>The Lab innovates across different devices, building expertise in designing for smartphone, tablet and computer, native apps and web applications. Different devices can consume the same services, allowing the creation of innovative responsive designs that work across different screen sizes.</p>
+
+		 </div>
+          <div id="water_wave" class="pos_absolute"></div>
+       	 <div id="flask" class="pos_absolute"> </div>
+          
+        
+       
+         <div id="flask_txt1" class="pos_absolute" data-0="top[swing]:50%;left[swing]:43%;transform[swing]:scale(0)rotate(40deg);opacity:0;" 
+         data-500="top[swing]:30%;left[swing]:43%;transform[swing]:scale(0.50)rotate(40deg);opacity:0.80;"
+         data-700="top:25%;left:41%;transform[swing]:scale(1)rotate(40deg);opacity:1;" data-1000="">CSS3</div>
+         
+         <div id="flask_txt2" class="pos_absolute" data-0="top[swing]:50%;left[swing]:43%;transform[swing]:scale(0)rotate(50deg);opacity:0;"
+         data-500="top[swing]:27%;left[swing]:43%;transform[swing]:scale(0.50)rotate(50deg);opacity:0.80;" 
+         data-700="top:16%;left:39%;transform[swing]:scale(1)rotate(50deg);opacity:1;" data-1000="">ABAPWD</div>
+         
+         <div id="flask_txt3" class="pos_absolute" data-0="top[swing]:50%;left[swing]:46.5%;transform[swing]:scale(0)rotate(270deg);opacity:0;" 
+         data-500="top[swing]:26%;left[swing]:46.5%;transform[swing]:scale(0.50)rotate(270deg);opacity:0.80;" 
+         data-700="top:12%;left:45.5%;transform[swing]:scale(1)rotate(270deg);opacity:1;" data-1000="">JAVA</div>
+         
+         <div id="flask_txt4" class="pos_absolute" data-0="top[swing]:50%;left[swing]:47%;transform[swing]:scale(0)rotate(310deg);opacity:0;"
+         data-500="top[swing]:18%;left[swing]:47%;transform[swing]:scale(0.50)rotate(310deg);opacity:0.80;"  
+         data-700="top[swing]:7%;left[swing]:50%;transform[swing]:scale(1)rotate(310deg);opacity:1;" data-1000="">UI5</div>
+         
+         <div id="flask_txt5" class="pos_absolute" data-0="top[swing]:50%;left[swing]:48%;transform[swing]:scale(0)rotate(310deg);opacity:0;"
+         data-500="top[swing]:26%;left[swing]:46%;transform[swing]:scale(0.50)rotate(310deg);opacity:0.80;" 
+         data-700="top[swing]:20%;left[swing]:48%;transform[swing]:scale(1)rotate(310deg);opacity:1;" data-1000="">Jquery</div>
+         
+         <div id="flask_txt6" class="pos_absolute" data-0="top[swing]:50%;left[swing]:45.5%;transform[swing]:scale(0)rotate(325deg);opacity:0;"
+         data-500="top[swing]:26%;left[swing]:47.5%;transform[swing]:scale(0.50)rotate(310deg);opacity:0.80;" 
+         data-700="top[swing]:24%;left[swing]:50.5%;transform[swing]:scale(1)rotate(325deg);opacity:1;" data-1000="">HTML5</div>
+         
+       	 <div id="small_hexagons" class="pos_absolute"></div>
+		 <div id="lab_arrows" class="pos_absolute" data-0="left:-70%;transform:scale(0);opacity:0;" data-916="left:0%;transform:scale(1);opacity:1;" data-1000="left:0%;transform:scale(1);opacity:1;" data-1700="left:-60%;transform:scale(0.50);opacity:0.80;"></div>
+         <div id="microscope" class="pos_absolute" data-0="right:-40%;transform:scale(0);opacity:0;" data-916="right:0%;transform:scale(1);opacity:1;" data-1000="right:0%;transform:scale(1);opacity:1;" data-1700="right:-10%;transform:scale(0.50);opacity:0.80;"></div>
+        
+        </div><!--lab_container ends here-->
+</section><!--lab ends here-->
+
+
+<section id="factory"  data-0="background-position:0px 800px;" data-1700="background-position:0px 45px;" data-2002="background-position:0px 45px;" >
+
+
+
+
+<div class="lab_container">
+     	
+ 
+    <div class="cloud1 pos_absolute"></div>
+    <div class="cloud2 pos_absolute"></div>
+    <div class="cloud3 pos_absolute"></div>
+    <div class="cloud4 pos_absolute"></div>
+   
+    <div class="factory_content pos_absolute" id="factory_content1" data-0="left:250%" data-1944="left:67%" data-1702="left:10%" data-2002="left:10%" data-2042="" data-2088=""    data-2146="left:100%"  data-2218="left:150%" >
+    	
+        <p >The Factory is where our best practice methodology is retained and improved, using a combination of agile and traditional iSAP, to fit with wider program management. The UI factory takes the knowledge gained from the Lab and industrialises the component development, through the use of defined methodology and a scalable team.</p>
+    </div> 
+     <div id="factory_hex1" class="pos_absolute"></div>
+     <div id="factory_hex2" class="pos_absolute"></div>
+     <div id="factory_hex3" class="pos_absolute"></div>
+     <div id="left_pump" class="pos_absolute" data-0="left:-30%"  data-2000="left:-30%" data-2250="left:0%" data-2350="left:0%" data-2550="left:0%" data-2720="left:-10%" data-3080="left:-30%"></div>
+     
+     <h2 id="project_txt" class="pos_absolute" data-0="opacity:0;transform:scale(0);"  data-2000="opacity:0;transform:scale(0);" data-2250="opacity:1;transform:scale(1);" data-2350="opacity:1;transform:scale(1);" data-2550="opacity:1;transform:scale(1);" data-2720="opacity:0.60;transform:scale(0.70);"
+     data-3080="opacity:0;transform:scale(0);">Project Methodolgy</h2>
+     
+     <div id="project_methodology" class="pos_absolute" data-0="opacity:0;transform:scale(0);"  data-2000="opacity:0;transform:scale(0);" data-2250="opacity:1;transform:scale(1);" data-2350="opacity:1;transform:scale(1);" data-2550="opacity:1;transform:scale(1);" data-3008="opacity:0.60;transform:scale(0.70);"
+     data-3080="opacity:0;transform:scale(0);"
+     ></div>
+     
+     <div id="right_pump" class="pos_absolute" data-0="right:-30%"data-2000="right:-30%" data-2250="right:0%" data-2350="right:0%" data-2550="right:0%" data-2720="right:-10%" data-3080="right:-30%;"></div>
+     
+     <h2 id="staff_txt" class="pos_absolute" data-0="opacity:0;transform:scale(0);"  data-2000="opacity:0;transform:scale(0);" data-2250="opacity:1;transform:scale(1);" data-2350="opacity:1;transform:scale(1);" data-2550="opacity:1;transform:scale(1);" data-2720="opacity:0.60;transform:scale(0.70);"
+     data-3080="opacity:0;transform:scale(0);">Staff Role</h2>
+     
+     <div id="staff_role" class="pos_absolute" data-0="opacity:0;transform:scale(0);"  data-2000="opacity:0;transform:scale(0);" data-2250="opacity:1;transform:scale(1);" data-2350="opacity:1;transform:scale(1);" data-2550="opacity:1;transform:scale(1);" data-2720="opacity:0.60;transform:scale(0.70);"
+     data-3080="opacity:0;transform:scale(0);"></div> 
+     
+     <div class="factory_inner_content pos_absolute" id="project_detail" data-0="left:-60%"  data-2000="left:-60%"  data-2480="left:15%" data-2550="left:15%">
+     The project methodology to deliver UI requirement follows iSAP methodology.<br>
+<br>
+As the diagram shows, the different phases are - project preparation, Blueprinting, Build,Test and Go Live. The prototyping during blueprint is done using Capgemini's Rapid, Design and Visualize (RDV) methodology. Agile methodology is used for the build phase. UI requirements can either be one sprint or can be divided into multiple sprints. After a successful build, the development goes into test phase and after successful testing it goes live.
+ 	</div>
+    
+    <div class="factory_inner_content pos_absolute" id="staff_detail" data-0="right:-60%"  data-2000="right:-60%" data-2450="right:8%" data-2550="right:8%">
+     The Factory has clearly defined roles for staff and a well defined set of standard templates in order to accelerate the delivery and capture improvement in process. The factory shares the repository for reusable components generated with the Lab in order to foster future innovation. The Factory enables efficiency in delivery through the process of continual improvement.
+ 	</div>
+    
+   <div id="factory_diagram1" class="pos_absolute" data-0="opacity:0;transform:scale(0);"  data-2000="opacity:0;transform:scale(0);" data-2865="opacity:1;transform:scale(1);" data-3080="opacity:1;transform:scale(1);"  data-3500="opacity:0.60;transform:scale(0.70);"
+     data-3800="opacity:0;transform:scale(0);"><img src="images/factory_diagram1.png" width="437" height="350"></div>
+   <div id="factory_diagram2" class="pos_absolute" data-0="opacity:0;transform:scale(0);"  data-2000="opacity:0;transform:scale(0);" data-2865="opacity:1;transform:scale(1);" data-3080="opacity:1;transform:scale(1);"  data-3500="opacity:0.60;transform:scale(0.70);"
+     data-3800="opacity:0;transform:scale(0);"><img src="images/factory_diagram2.png" width="463" height="598"></div>
+</div><!--lab_container ends here-->
+
+	 <div id="factory_bottom" class="pos_absolute"></div>	
+</section><!--factory ends here-->		
+
+<div class="bPopup" id="bPopup1">
+<a class="close_popup" id="bPopup1_close" data-close="bPopup1"></a>
+<div class="popup_details">
+
+    <img src="images/salesorder/salesorder_logo.png" width="100" height="50" class="popup_logo pos_absolute">
+    <div class="popup_content fl">
+    <div class="grey_tab">about SALES ORDER APPLICATION</div>
+    <div class="popup_txt">Sales Order is a very important document in business. SAP provides complete sales order processing. But it is complex for a normal user and not possible without SAP knowledge. Sometimes in business it happens that a non-SAP person has to create sales order. In such case, that person has to undergo a training to use SAP for sales order processing.
+    </div>
+    <div class="grey_tab">techno</div>
+    <div class="popup_txt">The application is simple HTML and Javascript based user interface and can be accessed easily from web browser over internet.
+    <a href="http://in-mum-eccs.corp.capgemini.com:8000/sap/bc/ui5_ui5/sap/zsalesorder/index.html" target="_blank" class="demo fr">view demo</a>
+    </div>
+    </div>
+    
+     <div class="popup_slider fr">
+     
+     	<section class="slider">
+        <div id="slider" class="flexslider">
+          <ul class="slides">
+            <li>
+  	    	    <img src="images/salesorder/salesorder1.jpg">
+  	    		</li>
+  	    		<li>
+  	    	    <img src="images/salesorder/salesorder2.jpg">
+  	    		</li>
+  	    		<li>
+  	    	    <img src="images/salesorder/salesorder3.jpg">
+  	    		</li>
+  	    		
+          </ul>
+        </div>
+        <div class="slider_txt">
+        As part of custom UI, the UI works offers a Sales Order Application which is zero training, easy to use user interface. The application provides various features like user authentication, order status tracking and creation of new sales order. It also displays order details based on order number or delivery number. 
+        </div>
+      </section>
+      
+    </div><!--popup_slider ends here-->
+    </div><!--popup_content ends here-->
+   
+</div><!--popup_details ends here-->
+
+<div class="bPopup" id="bPopup2">
+<a class="close_popup" id="bPopup2_close" data-close="bPopup2"></a>
+<div class="popup_details">
+
+    <img src="images/moveinmoveout/britishgas_logo.png" width="100" height="50" class="popup_logo pos_absolute">
+    <div class="popup_content fl">
+    <div class="grey_tab">about move in move out</div>
+    <div class="popup_txt">It is a very common scenario in utility companies that customers leave their current houses and terminate the contract, customers move to new houses and create a new contract. The application provides a simple user interface to perform home move out and move in operations for utility company customers.
+
+    </div>
+    <div class="grey_tab">techno</div>
+    <div class="popup_txt">SAPUI5, Jquery, SAP NW Gateway
+    <a href="http://in-mum-eccs.corp.capgemini.com:8000/sap/bc/ui5_ui5/sap/zisumoveapp/index.html" target="_blank" class="demo fr">view demo</a>
+    </div>
+</div>
+ 
+   
+     <div class="popup_slider fr">
+     
+     	<section class="slider">
+        <div id="slider" class="flexslider">
+          <ul class="slides">
+            <li>
+  	    	    
+                <img src="images/moveinmoveout/moveinmoveout1.jpg">
+                </li>
+  	    		<li>
+  	    	    <img src="images/moveinmoveout/moveinmoveout2.jpg">
+  	    		</li>
+  	    		<li>
+  	    	    <img src="images/moveinmoveout/moveinmoveout3.jpg">
+  	    		</li>
+                <li>
+  	    	    <img src="images/moveinmoveout/moveinmoveout4.jpg">
+  	    		</li>
+                <li>
+  	    	    <img src="images/moveinmoveout/moveinmoveout5.jpg">
+  	    		</li>
+                <li>
+  	    	    <img src="images/moveinmoveout/moveinmoveout6.jpg">
+  	    		</li>
+  	    		
+          </ul>
+        </div>
+        <div class="slider_txt">
+        The move in move out application takes customer number as an input. It fetches details of the customer and then allows user to perform either move out or move in for that customer. The application either terminates existing contract or creates a new contract based on the operation performed.
+ 
+        </div>
+      </section>
+      
+    </div><!--popup_slider ends here-->
+    </div><!--popup_content ends here-->
+   
+</div><!--popup_details ends here-->
+
+<div class="bPopup" id="bPopup3">
+<a class="close_popup" id="bPopup3_close" data-close="bPopup3"></a>
+<div class="popup_details">
+
+    <img src="images/sapui5-leaveapplication/leaveapplication_logo.png" width="100" height="50" class="popup_logo pos_absolute">
+    <div class="popup_content fl">
+    <div class="grey_tab">about Leave Application</div>
+    <div class="popup_txt">The Leave Application provides easy interface to the user to apply for leave or for approver to approve or reject leave requests.
+    </div>
+    <div class="grey_tab">techno</div>
+    <div class="popup_txt">
+    SAPUI5, SAP NW Gateway
+    <a href="http://in-mum-eccs.corp.capgemini.com:8000/sap/bc/ui5_ui5/sap/zleaveapp_ui5/index.html" target="_blank" class="demo fr">view demo</a>
+    </div>
+</div>
+ 
+   
+     <div class="popup_slider fr">
+     
+     	<section class="slider">
+        <div id="slider" class="flexslider">
+          <ul class="slides">
+            <li>
+  	    	    
+                <img src="images/sapui5-leaveapplication/leaveapplication1.jpg">
+                </li>
+  	    		
+  	    		
+          </ul>
+        </div>
+        <div class="slider_txt">
+      SAP provides leave management functionality as part of standard ESS/MSS component. Leave management is a very basic functionality and it is possible that each user of this functionality may not be familiar with SAP. It requires a training to access Leave Management System provided by SAP. 
+As part of custom UI, UI works offers a Leave Application which is zero training, easy to use user interface for Leave Management System provided by SAP. The application provides various features such as user authetication, leave balance display, leave request overview, submit leave and approve/reject leave requests for approvers.
+
+        </div>
+      </section>
+      
+    </div><!--popup_slider ends here-->
+    </div><!--popup_content ends here-->
+   
+</div><!--popup_details ends here-->
+
+<div class="bPopup" id="bPopup4">
+<a class="close_popup" id="bPopup4_close" data-close="bPopup4"></a>
+<div class="popup_details">
+
+    <img src="images/sapui5-stocklookupapplication/stocklookup_logo.png" width="100" height="50" class="popup_logo pos_absolute">
+    <div class="popup_content fl">
+    <div class="grey_tab">about Stock Lookup  Application</div>
+    <div class="popup_txt">Stock lookup application provides available stock and price details of an article in a particular store or in all stores of a region.
+    </div>
+    <div class="grey_tab">techno</div>
+    <div class="popup_txt">
+    SAPUI5, SAP NW Gateway
+    <a href="http://in-mum-eccs.corp.capgemini.com:8000/sap/bc/ui5_ui5/sap/zstocklookup/index.html" target="_blank" class="demo fr">view demo</a>
+    </div>
+</div>
+ 
+   
+     <div class="popup_slider fr">
+     
+     	<section class="slider">
+        <div id="slider" class="flexslider">
+          <ul class="slides">
+            <li>
+  	    	    
+                <img src="images/sapui5-stocklookupapplication/stocklookupapplication1.jpg">
+              </li>
+  	    		
+  	    		
+          </ul>
+        </div>
+        <div class="slider_txt">
+     SAP provides very powerful retail solution, which is implemented by many organizations across the world. A very common requirement in retail world is to find out stock and price details of a particular article. In a conventional way, user has to logon to SAP and find out the required information through standard SAP screens.
+UI Works offers a Stock Lookup Application, developed using SAPUI5, which is zero training, easy to use user interface to find out stock details. The application allows user to find out stock and price details of a particular article in a single store or in all stores of a particular country.
+
+
+        </div>
+      </section>
+      
+    </div><!--popup_slider ends here-->
+    </div><!--popup_content ends here-->
+   
+</div><!--popup_details ends here-->
+
+<div class="bPopup" id="bPopup5">
+<a class="close_popup" id="bPopup5_close" data-close="bPopup5"></a>
+<div class="popup_details">
+
+    <img src="images/mobileapp-lenoirapp/lenoir_logo.png" width="100" height="50" class="popup_logo pos_absolute">
+    <div class="popup_content fl">
+    <div class="grey_tab">about LeNoir  Application</div>
+    <div class="popup_txt">The application for customer Loyalty Management and to bring promotional offers to customers.
+    </div>
+    <div class="grey_tab">techno</div>
+    <div class="popup_txt">
+   HTML5, Jquery, Phonegap, SAP NW Gateway
+    <!--<a href="" target="_blank" class="demo fr">view demo</a>-->
+    </div>
+</div>
+ 
+   
+     <div class="popup_slider fr">
+     
+     	<section class="slider">
+        <div id="slider" class="flexslider">
+          <ul class="slides">
+            <li> 
+                <img src="images/mobileapp-lenoirapp/mobileapp-lenoirapp1.jpg">
+            </li>
+  	    	<li> 
+                <img src="images/mobileapp-lenoirapp/mobileapp-lenoirapp2.jpg">
+            </li>	
+  	    	<li> 
+                <img src="images/mobileapp-lenoirapp/mobileapp-lenoirapp3.jpg">
+            </li>
+            <li> 
+                <img src="images/mobileapp-lenoirapp/mobileapp-lenoirapp4.jpg">
+            </li>
+            <li> 
+                <img src="images/mobileapp-lenoirapp/mobileapp-lenoirapp5.jpg">
+            </li>
+            <li> 
+                <img src="images/mobileapp-lenoirapp/mobileapp-lenoirapp6.jpg">
+            </li>
+            <li> 
+                <img src="images/mobileapp-lenoirapp/mobileapp-lenoirapp7.jpg">
+            </li>
+            <li> 
+                <img src="images/mobileapp-lenoirapp/mobileapp-lenoirapp8.jpg">
+            </li>
+            <li> 
+                <img src="images/mobileapp-lenoirapp/mobileapp-lenoirapp9.jpg">
+            </li>
+            <li> 
+                <img src="images/mobileapp-lenoirapp/mobileapp-lenoirapp10.jpg">
+            </li>
+            <li> 
+                <img src="images/mobileapp-lenoirapp/mobileapp-lenoirapp11.jpg">
+            </li>
+            <li> 
+                <img src="images/mobileapp-lenoirapp/mobileapp-lenoirapp12.jpg">
+            </li>
+            <li> 
+                <img src="images/mobileapp-lenoirapp/mobileapp-lenoirapp13.jpg">
+            </li>
+            <li> 
+                <img src="images/mobileapp-lenoirapp/mobileapp-lenoirapp14.jpg">
+            </li>
+            <li> 
+                <img src="images/mobileapp-lenoirapp/mobileapp-lenoirapp15.jpg">
+            </li>	
+          </ul>
+        </div>
+        <div class="slider_txt">
+     Customer satisfaction is a key for successful business. Loyalty Management is an important factor to increase customer satisfaction.
+This application is a solution for customer loyalty management. The loyalty management applications provides different features such as, new member registration, user profile management, e-loyalty card, accumulation and redemption of loyalty points, transaction history display.
+The application also brings running offers or newly launched offers to customers. User can maintain offers of his interest as "My Vouchers". User can also scan a physical coupon code and save it in "My Vouchers".
+The application helps business to stay focused on customers and hence to stay ahead in the market.
+
+
+
+        </div>
+      </section>
+      
+    </div><!--popup_slider ends here-->
+    </div><!--popup_content ends here-->
+   
+</div><!--popup_details ends here-->
+
+<div class="bPopup" id="bPopup6">
+<a class="close_popup" id="bPopup6_close" data-close="bPopup6"></a>
+<div class="popup_details">
+
+    <img src="" class="popup_logo pos_absolute">
+    <div class="popup_content fl">
+    <div class="grey_tab">about Tango  Application</div>
+    <div class="popup_txt">The application for customer Loyalty Management and to bring promotional offers to customers.
+    </div>
+    <div class="grey_tab">techno</div>
+    
+    <div class="popup_txt">
+   HTML5, Jquery, Phonegap, SAP NW Gateway
+
+    <!--<a href="" target="_blank" class="demo fr">view demo</a>-->
+    </div>
+</div>
+ 
+   
+     <div class="popup_slider fr">
+     
+     	<section class="slider">
+        <div id="slider" class="flexslider">
+          <ul class="slides">
+            <li>	    
+                <img src="images/mobileapp-tango/mobileapp-tango1.jpg">
+            </li>
+  	    	<li>	    
+                <img src="images/mobileapp-tango/mobileapp-tango2.jpg">
+            </li>
+            <li>	    
+                <img src="images/mobileapp-tango/mobileapp-tango3.jpg">
+            </li>
+            <li>	    
+                <img src="images/mobileapp-tango/mobileapp-tango4.jpg">
+            </li>
+            <li>	    
+                <img src="images/mobileapp-tango/mobileapp-tango5.jpg">
+            </li>	
+  	    		
+          </ul>
+        </div>
+        <div class="slider_txt">
+     Customer satisfaction is a key for successful business. Loyalty Management is an important factor to increase customer satisfaction.
+This application is a solution for customer loyalty management. The loyalty management applications provides different features such as, new member registration, user profile management, e-loyalty card, accumulation and redemption of loyalty points, transaction history display.
+The application also brings running offers or newly launched offers to customers. 
+The application helps business to stay focused on customers and hence to stay ahead in the market.
+
+
+
+
+        </div>
+      </section>
+      
+    </div><!--popup_slider ends here-->
+    </div><!--popup_content ends here-->
+   
+</div><!--popup_details ends here-->
+
+<div class="bPopup" id="bPopup7">
+<a class="close_popup" id="bPopup7_close" data-close="bPopup7"></a>
+<div class="popup_details">
+
+    <img src="images/mobileapp-pimonitor/pimonitoring_logo.png" width="100" height="50" class="popup_logo pos_absolute">
+    <div class="popup_content fl">
+    <div class="grey_tab">about PI Monitor  Application</div>
+    <div class="popup_txt">SAP PI (Process Integration) is an integration solution provided by SAP. 
+    </div>
+    <div class="grey_tab">techno</div>
+    <div class="popup_txt">
+    HTML5, Jquery, Phonegap, SAP NW Gateway
+    <!--<a href="" target="_blank" class="demo fr">view demo</a>-->
+    </div>
+</div>
+ 
+   
+     <div class="popup_slider fr">
+     
+     	<section class="slider">
+        <div id="slider" class="flexslider">
+          <ul class="slides">
+            <li>	    
+                <img src="images/mobileapp-pimonitor/mobileapp-pimonitor1.jpg">
+            </li>
+  	    	<li>	    
+                <img src="images/mobileapp-pimonitor/mobileapp-pimonitor2.jpg">
+            </li>
+            <li>	    
+                <img src="images/mobileapp-pimonitor/mobileapp-pimonitor3.jpg">
+            </li>
+            <li>	    
+                <img src="images/mobileapp-pimonitor/mobileapp-pimonitor4.jpg">
+            </li>
+            <li>	    
+                <img src="images/mobileapp-pimonitor/mobileapp-pimonitor5.jpg">
+            </li>	
+  	    		
+          </ul>
+        </div>
+        <div class="slider_txt">
+     Message monitoring is a very important feature of SAP PI. It is used in following cases - 
+- To get an overview of message processing.
+- To track the status of messages
+- To find errors that have occurred and establish what caused them
+Normally for message monitoring in SAP PI, one has to either login to SAP PI system or open Runtime Workbench.
+The PI Monitor Application brings message monitoring to mobile. The application provides features like - search messages, display error details for messages in error and cancel/restart message.
+
+
+
+
+
+        </div>
+      </section>
+      
+    </div><!--popup_slider ends here-->
+    </div><!--popup_content ends here-->
+   
+</div><!--popup_details ends here-->
+
+<div class="bPopup" id="bPopup8">
+<a class="close_popup" id="bPopup8_close" data-close="bPopup8"></a>
+<div class="popup_details">
+
+    <img src="images/sapui5-leaveapplication/leaveapplication_logo.png" class="popup_logo pos_absolute">
+    <div class="popup_content fl">
+    <div class="grey_tab">about Leave  Application</div>
+    <div class="popup_txt">The Leave Application provides easy interface to the user to apply for leave or for approver to approve or reject leave requests. 
+    </div>
+    <div class="grey_tab">techno</div>
+    <div class="popup_txt">
+   HTML5, Jquery, SAP NW Gateway
+    <a href="http://in-mum-eccs.corp.capgemini.com:8000/sap/bc/ui5_ui5/sap/zleaveapp_new/login.html" target="_blank" class="demo fr">view demo</a>
+    </div>
+</div>
+ 
+   
+     <div class="popup_slider fr">
+     
+     	<section class="slider">
+        <div id="slider" class="flexslider">
+          <ul class="slides">
+            <li>	    
+                <img src="images/sapui5-leaveapplication/leaveapplication1.jpg">
+              </li>
+  	    		
+  	    		
+          </ul>
+        </div>
+        <div class="slider_txt">
+     SAP provides leave management functionality as part of standard ESS/MSS component. Leave management is a very basic functionality and it is possible that each user of this functionality may not be familiar with SAP. It requires a training to access Leave Management System provided by SAP. 
+As part of custom UI, UI works offers a Leave Application which is zero training, easy to use user interface for Leave Management System provided by SAP. The application provides various features such as user authetication, leave balance display, leave request overview, submit leave and approve/reject leave requests for approvers.
+
+
+
+
+
+
+        </div>
+      </section>
+      
+    </div><!--popup_slider ends here-->
+    </div><!--popup_content ends here-->
+   
+</div><!--popup_details ends here-->
+<div class="bPopup" id="bPopup9">
+<a class="close_popup" id="bPopup9_close" data-close="bPopup9"></a>
+<div class="popup_details">
+
+    <img src="images/browserapplication-salesorder/salesorder_logo.png" class="popup_logo pos_absolute">
+    <div class="popup_content fl">
+    <div class="grey_tab">about Sales Order Application</div>
+    <div class="popup_txt"> Sales Order is a very important document in business. SAP provides complete sales order processing.
+    </div>
+    <div class="grey_tab">techno</div>
+    <div class="popup_txt">
+    HTML5, Jquery, SAP NW Gateway
+    The application is simple HTML and Javascript based user interface and can be accessed easily from web browser over internet.
+    <a href="http://sapuiworks.in.capgemini.com:8000/SalesOrderApp/login.html" target="_blank" class="demo fr">view demo</a>
+    </div>
+</div>
+ 
+   
+     <div class="popup_slider fr">
+     
+     	<section class="slider">
+        <div id="slider" class="flexslider">
+          <ul class="slides">
+            <li>	    
+                <img src="images/browserapplication-salesorder/salesorder-1.jpg">
+            </li>
+  	    	<li>	    
+                <img src="images/browserapplication-salesorder/salesorder-2.jpg">
+            </li>
+            <li>	    
+                <img src="images/browserapplication-salesorder/salesorder-3.jpg">
+            </li>
+            <li>	    
+                <img src="images/browserapplication-salesorder/salesorder-4.jpg">
+            </li>
+            <li>	    
+                <img src="images/browserapplication-salesorder/salesorder-5.jpg">
+            </li>
+            <li>	    
+                <img src="images/browserapplication-salesorder/salesorder-6.jpg">
+            </li>	
+  	    		
+          </ul>
+        </div>
+        <div class="slider_txt">
+    Sales Order is a very important document in business. SAP provides complete sales order processing. But it is complex for a normal user and not possible without SAP knowledge. Sometimes in business it happens that a non-SAP person has to create sales order. In such case, that person has to undergo a training to use SAP for sales order processing. 
+As part of custom UI, the UI works offers a Sales Order Application which is zero training, easy to use user interface. The application provides various features like user authentication, order status tracking and creation of new sales order. It also displays order details based on order number or delivery number.
+
+
+
+
+
+
+        </div>
+      </section>
+      
+    </div><!--popup_slider ends here-->
+    </div><!--popup_content ends here-->
+   
+</div><!--popup_details ends here-->
+
+<div class="bPopup" id="bPopup10">
+<a class="close_popup" id="bPopup10_close" data-close="bPopup10"></a>
+<div class="popup_details">
+
+    <img src="images/sapui5-stocklookupapplication/stocklookup_logo.png" class="popup_logo pos_absolute">
+    <div class="popup_content fl">
+    <div class="grey_tab">about Stock lookup  Application</div>
+    <div class="popup_txt"> Stock lookup application provides available stock and price details of an article in a particular store or in all stores of a region.
+    </div>
+    <div class="grey_tab">techno</div>
+    <div class="popup_txt">
+ HTML5, Jquery, SAP NW Gateway
+
+    <a href="http://sapuiworks.in.capgemini.com:8000/StockLookupApp/index.html" target="_blank" class="demo fr">view demo</a>
+    </div>
+</div>
+ 
+   
+     <div class="popup_slider fr">
+     
+     	<section class="slider">
+        <div id="slider" class="flexslider">
+          <ul class="slides">
+            <li>	    
+                <img src="images/browserapp-stocklookup/browserapp-stocklookup1.jpg">
+            </li>
+  	    	<li>	    
+                <img src="images/browserapp-stocklookup/browserapp-stocklookup2.jpg">
+            </li>	
+  	    		
+          </ul>
+        </div>
+        <div class="slider_txt">
+    SAP provides very powerful retail solution, which is implemented by many organizations across the world. A very common requirement in retail world is to find out stock and price details of a particular article. In a conventional way, user has to logon to SAP and find out the required information through standard SAP screens.
+UI Works offers a Stock Lookup Application, developed using SAPUI5, which is zero training, easy to use user interface to find out stock details. The application allows user to find out stock and price details of a particular article in a single store or in all stores of a particular country.
+
+
+
+
+
+
+
+
+        </div>
+      </section>
+      
+    </div><!--popup_slider ends here-->
+    </div><!--popup_content ends here-->
+   
+</div><!--popup_details ends here-->
+
+<div class="bPopup" id="bPopup11">
+<a class="close_popup" id="bPopup11_close" data-close="bPopup11"></a>
+<div class="popup_details">
+
+    <!--<img src="images/browserapplication-salesorder/salesorder_logo.png" class="popup_logo pos_absolute">-->
+    <div class="popup_content fl">
+    <div class="grey_tab">about ISU Meter Reading </div>
+    <div class="popup_txt"> SAP has very powerful and successful solution for Utility Industry and many utility providers across the world have implemented SAP utility solution.
+    </div>
+    <div class="grey_tab">techno</div>
+    <div class="popup_txt">
+    HTML5, Jquery, SAP NW Gateway<br>
+
+   The application is simple HTML and Javascript based user interface and can be accessed easily from web browser over internet.
+    <a href="http://sapuiworks.in.capgemini.com:8000/MeterApp/index.html" target="_blank" class="demo fr">view demo</a>
+    </div>
+</div>
+ 
+   
+     <div class="popup_slider fr">
+     
+     	<section class="slider">
+        <div id="slider" class="flexslider">
+          <ul class="slides">
+            <li>	    
+                <img src="images/browserapp-isumeter/browserapp-isumeter1.jpg">
+            </li>
+  	    	<li>	    
+                <img src="images/browserapp-isumeter/browserapp-isumeter2.jpg">
+            </li>
+            <li>	    
+                <img src="images/browserapp-isumeter/browserapp-isumeter3.jpg">
+            </li>
+            <li>	    
+                <img src="images/browserapp-isumeter/browserapp-isumeter4.jpg">
+            </li>	
+  	    		
+          </ul>
+        </div>
+        <div class="slider_txt">
+    Meter services are very important in any utility solution. Utility providers must provide proper meter services to their customers.
+As part of custom UI, the UI works offers a meter application which is a zero training, easy to use user interface that utility company can provide to their customers. Currently the application has a feature to upload meter reading. User of this application can upload meter reading against his contract account number given by the provider.
+
+
+
+
+
+
+
+        </div>
+      </section>
+      
+    </div><!--popup_slider ends here-->
+    </div><!--popup_content ends here-->
+   
+</div><!--popup_details ends here-->
+
+<div class="bPopup" id="bPopup12">
+<a class="close_popup" id="bPopup12_close" data-close="bPopup12"></a>
+<div class="popup_details">
+
+    <!--<img src="images/browserapplication-salesorder/salesorder_logo.png" class="popup_logo pos_absolute">-->
+    <div class="popup_content fl">
+    <div class="grey_tab">about VMS Application </div>
+    <div class="popup_txt"> VMS stands for Vehicle Management System. The VMS application is a new custom and more user friendly interface as an alternative to standard SAP VMS. The application simplifies different actions of standard SAP VMS for the user.
+    </div>
+    <div class="grey_tab">techno</div>
+    <div class="popup_txt">
+    HTML5, Jquery, SAP NW Gateway<br>
+
+    <!--<a href="" target="_blank" class="demo fr">view demo</a>-->
+    </div>
+</div>
+ 
+   
+     <div class="popup_slider fr">
+     
+     	<section class="slider">
+        <div id="slider" class="flexslider">
+          <ul class="slides">
+            <li>	    
+                <img src="images/browserapp-vms/browserapp-vms1.jpg">
+            </li>
+  	    	<li>	    
+                <img src="images/browserapp-vms/browserapp-vms2.jpg">
+            </li>
+            <li>	    
+                <img src="images/browserapp-vms/browserapp-vms3.jpg">
+            </li>
+            <li>	    
+                <img src="images/browserapp-vms/browserapp-vms4.jpg">
+            </li>
+            <li>	    
+                <img src="images/browserapp-vms/browserapp-vms5.jpg">
+            </li>
+            <li>	    
+                <img src="images/browserapp-vms/browserapp-vms6.jpg">
+            </li>
+            <li>	    
+                <img src="images/browserapp-vms/browserapp-vms7.jpg">
+            </li>	
+  	    		
+          </ul>
+        </div>
+        <div class="slider_txt">
+    The application provides a simple process to create internal vehicle into SAP system. User can configure the vehicle as per his choice. Once a vehicle is created, before placing a purchase order, user can easily change the vehicle configuration by providing vehicle number. The application also allows to place a purchase order for newly created vehicles.
+
+
+
+
+
+
+
+        </div>
+      </section>
+      
+    </div><!--popup_slider ends here-->
+    </div><!--popup_content ends here-->
+   
+</div><!--popup_details ends here-->
+<section id="showroom"  data-0="background-position:0px 0px;" data-3000 ="background-position:0px 0px;" data-end="background-position:0px 0px;">
+<div id="showroom_bg" data-2000="background-position:0px -500px;" data-3000 ="background-position:0px 0px;" data-4800="background-position:0px 500px;">
+<ul id="tabs" >
+    <li><a href="JavaScript:void" title="tab1">SAPUI5 Applications</a></li>
+    <li><a href="JavaScript:void" title="tab2">Mobile Applications</a></li>
+    <li><a href="JavaScript:void" title="tab3">Browser Applications</a></li>
+      
+</ul>
+
+<div id="tab_content" data-0="opacity:0;" data-2304="opacity:0;" data-2703="opacity:1;"data-3003=""> 
+    <div id="tab1">
+ 
+	  		<section class="showroom_tab1 pos_relative">
+      		<section class="pos_absolute">
+        	<span class="darkgrey"></span>
+           
+            <a href="#" id="pop1" data-OverlayID="bPopup1" class="white"><span class="hex_txt"> Sales Order Application</span></a> 
+            <span class="lightgrey"></span>
+           <a href="#" class="white" data-OverlayID="bPopup2" id="pop2"><span class="hex_txt">Move in move out Application</span></a>
+            <span class="lightgrey"></span>
+            <span class="darkgrey"></span>
+            </section>
+            </section>
+			<section class="showroom_tab2 pos_relative">
+            <section class="pos_absolute tab_1">
+           <a href="#" class="white" data-OverlayID="bPopup3" id="pop3"><span class="hex_txt">leave Application</span></a>
+           <span class="lightgrey"></span>
+            <a href="#" class="white" data-OverlayID="bPopup4" id="pop4"><span class="hex_txt">Stock Lookup Application</span></a>
+            <span class="lightgrey"></span>
+           <span class="lightgrey"></span>
+            </section>
+            </section>
+            <section class="showroom_tab1 pos_relative">
+            <section class="pos_absolute tab_2">
+        	<span class="darkgrey"></span>
+            <span class="lightgrey"></span>
+            <span class="lightgrey"></span>
+            <span class="lightgrey"></span>
+            <span class="lightgrey"></span>
+            <span class="darkgrey"></span>
+            </section>
+      		</section>
+            
+			
+           
+       
+    </div>
+    <div id="tab2">
+        	<section class="showroom_tab1 pos_relative">
+      		<section class="pos_absolute">
+        	<span class="darkgrey"></span>
+            <a href="#" id="pop5" data-OverlayID="bPopup5" class="white"><span class="hex_txt">LeNoir Application</span></a> 
+            <span class="lightgrey"></span>
+            <a href="#" id="pop6" data-OverlayID="bPopup6" class="white"><span class="hex_txt">Tango Application</span></a> 
+            <span class="lightgrey"></span>
+            <span class="darkgrey"></span>
+            </section>
+            </section>
+			<section class="showroom_tab2 pos_relative">
+            <section class="pos_absolute tab_1">
+            <a href="#" id="pop7" data-OverlayID="bPopup7" class="white"><span class="hex_txt">PI Monitor Application</span></a> 
+            <span class="lightgrey"></span>
+           <span class="lightgrey"></span>
+           <span class="lightgrey"></span>
+          <span class="lightgrey"></span>
+            </section>
+            </section>
+            <section class="showroom_tab1 pos_relative">
+            <section class="pos_absolute tab_2">
+        	<span class="darkgrey"></span>
+          	<span class="lightgrey"></span>
+            <span class="lightgrey"></span>
+            <span class="lightgrey"></span>
+            <span class="lightgrey"></span>
+            <span class="darkgrey"></span>
+            </section>
+      		</section> 
+    </div>
+    <div id="tab3">
+      		<section class="showroom_tab1 pos_relative">
+      		<section class="pos_absolute">
+        	<span class="darkgrey"></span>
+            <a href="#" id="pop8" data-OverlayID="bPopup8" class="white"><span class="hex_txt">Leave Application</span></a> 
+            <span class="lightgrey"></span>
+            <a href="#" id="pop9" data-OverlayID="bPopup9" class="white"><span class="hex_txt">Sales Order  Application</span></a> 
+            <span class="lightgrey"></span>
+            <span class="darkgrey"></span>
+            </section>
+            </section>
+			<section class="showroom_tab2 pos_relative">
+            <section class="pos_absolute tab_1">
+            <a href="#" id="pop10" data-OverlayID="bPopup10" class="white"><span class="hex_txt">Stock Lookup Application</span></a>
+           <span class="lightgrey"></span>
+            <a href="#" id="pop11" data-OverlayID="bPopup11" class="white"><span class="hex_txt">ISU Meter Reading </span></a>
+            <span class="lightgrey"></span>
+            <a href="#" id="pop12" data-OverlayID="bPopup12" class="white"><span class="hex_txt">VMS Application </span></a>
+            </section>
+            </section>
+            <section class="showroom_tab1 pos_relative">
+            <section class="pos_absolute tab_2">
+        	<span class="darkgrey"></span>
+            <span class="lightgrey"></span>
+            <span class="lightgrey"></span>
+            <span class="lightgrey"></span>
+            <span class="lightgrey"></span>
+            <span class="darkgrey"></span>
+            </section>
+      		</section> 
+    </div>
+    
+    
+    
+    
+</div>
+</div><!--showroom_bg ends here-->
+</section><!--showroom ends here-->	
+
+
+<section id="team" data-4200="background-position:0 -3000px;" data-4900="background-position:0 0px;" data-5200="background-position:0 0px;" data-5800="background-position:0 3000px;">
+<div id="team_wrapper">
+<!--<div id="team_page" data-0="opacity:0;" data-4800="opacity:0.20;" data-4900="opacity:1;" data-5200=""  >-->
+<div id="team_page" >
+			<div id="team_thumbs" class="jThumbnailScroller" style="top:160px; height:600px;">
+	<div class="jTscrollerContainer">
+		<div class="jTscroller">
+			<div  id="team1" class="pointer_cl"><img src="images/teamthumb_paul.png" /></div>
+			<div id="team2" class="pointer_cl"><img src="images/teamthumb_sumeet.png" /></div>
+            <div id="team3" class="pointer_cl" ><img src="images/teamthumb_sachin.png" /></div>
+            <div id="team4" class="pointer_cl"><img src="images/teamthumb_bhargav.png" /></div>
+			<div id="team5" class="pointer_cl"><img src="images/teamthumb_jyoti.png" /></div>
+           
+		</div>
+	</div>
+	<a href="#" class="jTscrollerPrevButton"></a>
+	<a href="#" class="jTscrollerNextButton"></a>
+</div>
+
+            	
+            		<div id="team_member1" class="fl team_container">
+                    	
+                    <img src="images/team_paul.png" width="292" height="336" class=" team_img" id="team_img1" >
+                        <div class="team_content " >
+                          <div class="team_heading" id="team_head1"><h3 style="width:330px;">SAP User Experience and Integration Team Lead</h3><span><img src="images/creative_director_img.png" width="85" height="61"></span></div>
+                          <h2 class="team_head" id="team_name1">Paul Tomlinson</h2>
+                          <div id="team_details1">
+                          <p >Working with SAP for over 15 years, Paul and his team are delivering a Consumer Grade User 
+Experience to the SAP User Interface. Delivering real business benefits to organizations implementing this.
+
+                            </p>
+                            <p class="blue_txt ">paul.tomlinson@capgemini.com , +44 (0) 870 366 0292, Twitter: @PaulTom </p>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    
+                    <div id="team_member2" class="fl team_container">
+                    	
+                    <img src="images/team_sumeet.png" width="292" height="336" class=" team_img" id="team_img2" >
+                        <div class="team_content " >
+                          <div class="team_heading" id="team_head2"><h3>UI Works COE Lead</h3><span><img src="images/creative_director_img.png" width="85" height="61"></span></div>
+                          <h2 class="team_head" id="team_name2">Sumeet Nag</h2>
+                          <div id="team_details2">
+                          <p>I have over 9 years of experience with different UI technologies. My objective is to bring pixel perfect design and consumer grade user experience to the enterprise world.
+While concepts like design for touch, delight with motion and intuitive interaction are very much unheard off in the ERP space, at the UI Works C.O.E we have built an enviable practice delivering high quality solutions.
+
+
+                            </p>
+                            <p class="blue_txt ">sumeet.nag@capgemini.com +44 7891154865 Twitter: @sumeetnag</p>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    
+                    <div id="team_member3" class="fl team_container">
+                    	
+                    <img src="images/team_sachin.png" width="292" height="336" class=" team_img" id="team_img3" >
+                        <div class="team_content " >
+                          <div class="team_heading" id="team_head3"><h3>SAP UI Works lead</h3><span><img src="images/creative_director_img.png" width="85" height="61"></span></div>
+                          <h2 class="team_head" id="team_name3">Sachin Kagliwal</h2>
+                          <div id="team_details3">
+                          <p >I have over 12+  years of experience with SAP & UI technologies. User Experience & Integration  with SAP are  the topics that interest me.
+At UI Works COE, my role includes leading the India team, build capability, innovative & futuristic solutions that helps clients improving the user experience in ERP world.
+
+                            </p>
+                            <p class="blue_txt ">Sachin.Kagliwal@cagpemini.com Cell: +91 9819086050</p>
+                            </div>
+                        </div>
+                    
+                    </div>
+                 
+                 	
+                    <div id="team_member4" class="fl team_container">
+                    	
+                    <img src="images/team_bhargav.png" width="292" height="336" class=" team_img" id="team_img4" >
+                        <div class="team_content " >
+                          <div class="team_heading" id="team_head4"><h3 style="width:235px;">SAP UI and Integration Consultant</h3><span><img src="images/creative_director_img.png" width="85" height="61"></span></div>
+                          <h2 class="team_head" id="team_name4">Bhargav Joshi</h2>
+                          <div id="team_details4">
+                          <p >Bhargav has over 6 years of experience and worked on different technologies – SAP PI, SAPUI5, Core Java. At SAP UI Works, he is a technical consultant for SAPUI5 and other UI technologies.
+                            </p>
+                            <p class="blue_txt "></p>
+                            </div>
+                        </div>
+                    
+                    </div>
+				 
+                   
+                   <div id="team_member5" class="fl team_container">
+                    	
+                    <img src="images/team_jyoti.png" width="292" height="336" class=" team_img" id="team_img5" >
+                        <div class="team_content " >
+                          <div class="team_heading" id="team_head5"><h3>Creative Designer </h3><span><img src="images/creative_director_img.png" width="85" height="61"></span></div>
+                          <h2 class="team_head" id="team_name5">Jyoti Gaonkar</h2>
+                          <div id="team_details5">
+                          <p >As web designer I am 9 years old, keenly focused on crafting clean  & user‑friendly design experiences. My role includes visualizing, designing and customizing the client requirements by understanding the business process. I am very much passionate about my work.
+
+                            </p>
+                            <p class="blue_txt ">jyoti.gaonkar@cagpemini.com
+Cell: +91 9833078331
+</p>
+                            </div>
+                        </div>
+                    
+                    </div>
+                 
+                 
+                 
+                 
+                 
+
+
+
+
+</div><!--team_page ends here-->      
+
+</div><!--team_wrapper ends here--> 
+</section> 
+
+<section id="contact"  data-4900="opacity:0;" data-5900="opacity:1;">
+	   
+	<div id="contact_bg"  data-4900="background-position:0 -3000px;" data-5900="background-position:0 0px;" >
+		<div class="container">
+  		<div id="contact_txt">
+        <div id="mailbox"><img src="images/mail_box.png" width="546" height="46"></div>
+        <div id="suggestions1">We value your suggestions</div>
+		<div id="suggestions2">We will be very happy to see your inputs</div>
+        
+        <div id="contactus_txt">
+        
+Please email us your ideas, concerns and recommendations<br>
+to improve products! 
+<br>
+<br>
+
+<a href="mailto:sapuiworks.in@capgemini.com" id="contactus_mail">sapuiworks.in@capgemini.com</a></div>
+        </div>
+    </div>
+        
+    
+    
+    </div>
+   	
+   
+   
+    
+    
+    
+     
+     
+   
+    
+  
+
+      
+    
+</section>
+</div>  <!--sap_container ends here-->
+
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="js/skrollr.ie.js"></script>
+	<![endif]-->
+<script type="text/javascript" src="js/skrollr.min.js"></script>
+
+  <script type="text/javascript">
+//for parallax scrolling
+ var s = skrollr.init({
+	 curTop: 10, //the current scroll top offset
+   	 lastTop: 0, //the top value of last time
+   	 maxTop: 100, //the max value you can scroll to. curTop/maxTop will give you the current progress.
+     direction: 'down', //either up or down
+	 edgeStrategy: 'set',
+	 smoothScrolling: 'true',
+     forceHeight: 'true',
+	/*smoothScrollingDuration:'default',
+	constants: {
+        screen_offset: 2200
+    },*/
+	//easing:'swing',
+	easing: {
+			bounce: Math.random,
+			inverted: function(p) {
+				return 1-p;
+			}
+		},
+	 render: function(data) {
+        //Log the current scroll position.
+        console.log(data.curTop);
+    }
+	
+	});  
+	s.refresh();  
+
+    </script>
+<script>
+
+/* calling thumbnailScroller function with options as parameters */
+(function($){
+window.onload=function(){ 
+	$("#team_thumbs").thumbnailScroller({ 
+		scrollerType:"hoverPrecise", 
+		scrollerOrientation:"vertical", 
+		scrollSpeed:2, 
+		scrollEasing:"easeOutCirc", 
+		scrollEasingAmount:800, 
+		acceleration:4, 
+		scrollSpeed:800, 
+		noScrollCenterSpace:10, 
+		autoScrolling:0, 
+		autoScrollingSpeed:2000, 
+		autoScrollingEasing:"easeInOutQuad", 
+		autoScrollingDelay:500 
+	});
+}
+})(jQuery);
+</script>
+
+</body>
+</html>
